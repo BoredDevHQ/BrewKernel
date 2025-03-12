@@ -3,10 +3,10 @@
 This is a kernel written in C and x86 assembly which then transforms into x86_64 during compilation. It basically just prints some text and then does not much more.
 
 Roadmap:
-✅ Bootloader using grub
-✅ Easy compiling command utilizing Docker for universal support
-✅ Text output
-❌ Keyboard input
+✅ Bootloader using grub </br>
+✅ Easy compiling command utilizing Docker for universal support </br>
+✅ Text output </br>
+❌ Keyboard input </br>
 ❌ Terminal commands
 
 
