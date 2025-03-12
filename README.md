@@ -1,11 +1,13 @@
-# Sort of made my "own" kernel
+# My own kernel!
 
-its not really impressive in any way and i've slightly altered of what i saw on a youtube video on how to do but i guess its cool, enjoy :D
+This is a kernel written in C and x86 assembly which then transforms into x86_64 during compilation. It basically just prints some text and then does not much more.
 
-
-
-
-
+Roadmap:
+✅ Bootloader using grub
+✅ Easy compiling command utilizing Docker for universal support
+✅ Text output
+❌ Keyboard input
+❌ Terminal commands
 
 
 
