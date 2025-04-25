@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="140">
   <style>
     text {
       font-family: monospace;
@@ -12,4 +12,4 @@
   <text x="10" y="80" fill="#ED1C24">  |      |]</text>
   <text x="10" y="100" fill="#A349A4">  \      /</text>
   <text x="10" y="120" fill="#0071FF">   `----'</text>
-</svg> <br>
+</svg>
