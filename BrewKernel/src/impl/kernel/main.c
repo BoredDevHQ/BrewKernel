@@ -18,7 +18,7 @@
 
 // Main kernel file for Brew kernel.
 // This file contains the main function and the kernel's entry point.
-// It prints a welcome message and then loops all VGA characters to the screen.
+// It prints a welcome message, does a math preview and then loops all VGA characters to the screen.
 
 #include "print.h"
 
