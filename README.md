@@ -11,7 +11,7 @@ Brew Kernel is a simple x86_64 kernel that demonstrates basic OS concepts. It fe
 - Basic Interrupt Descriptor Table (IDT) implementation
 - ASCII character display demo
 - Integer output support with signed and unsigned number handling
-- **Able to run on actual x86_64 hardware.**
+- Ability to run on actual x86_64 hardware
 
 
 ## Prerequisites
