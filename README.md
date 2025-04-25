@@ -1,20 +1,6 @@
 # Brew Kernel
 
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120">
-  <style>
-    text {
-      font-family: monospace;
-      font-size: 14px;
-      white-space: pre;
-    }
-  </style>
-  <text x="10" y="20" fill="#0071FF">( (</text>
-  <text x="10" y="40" fill="#6CC64A">    ) )</text>
-  <text x="10" y="60" fill="#F5C22D">  ........</text>
-  <text x="10" y="80" fill="#ED1C24">  |      |]</text>
-  <text x="10" y="100" fill="#A349A4">  \      /</text>
-  <text x="10" y="120" fill="#0071FF">   `----'</text>
-</svg> <br>
+<img src="asciiart.png" width="200" />
 Brew Kernel is a simple x86_64 kernel that demonstrates basic OS concepts. It features a custom bootloader, VGA text mode output with customizable colors, and basic interrupt handling.
 
 ## Features
