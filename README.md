@@ -1,5 +1,13 @@
 # Brew Kernel
 
+<div><pre style="background-color: transparent; border: none; padding: 0; margin: 0;">
+<span style="color:#0071FF">( (</span>
+<span style="color:#6CC64A">    ) )</span>
+<span style="color:#F5C22D">  ........</span>
+<span style="color:#ED1C24">  |      |]</span>
+<span style="color:#A349A4">  \      /</span>
+<span style="color:#0071FF">   `----'</span></pre></div>
+
 Brew Kernel is a simple x86_64 kernel that demonstrates basic OS concepts. It features a custom bootloader, VGA text mode output with customizable colors, and basic interrupt handling.
 
 ## Features
