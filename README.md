@@ -28,7 +28,7 @@ docker build -t brewkernel-buildenv .
 
 ```sh
 cd ..
-docker run --rm -v $(pwd):/root/env brewkernel-buildenv make build-x86_64
+docker run --rm -it -v "$(pwd)":/root/env --platform linux/amd64 voidkernel make build-x86_64
 ```
 
 The build process will create:
