@@ -51,7 +51,7 @@ Or run Brew on actual hardware. </br>
 
 - Step 1:
     Install BalenaEtcher on your device </br>
-    *From own testing this should work, if you would like to use DD, then do so at again, your own risk.*
+    *From own testing this should work, if you would like to use DD, then do so. At again, your own risk.*
 
 - Step 2:
     Open BalenaEtcher and choose the kernel.iso, an external USB drive and flash it, this should take a second, if not less.
