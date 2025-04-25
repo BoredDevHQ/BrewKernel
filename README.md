@@ -114,7 +114,7 @@ Basic IDT setup with handlers for:
 ###
 ###
 
-<h2 align="left">Support Me 💜</h2>
+<h2 align="left">Help me brew some coffee! ☕️</h2>
 
 ###
 
