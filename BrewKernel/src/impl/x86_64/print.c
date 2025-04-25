@@ -211,3 +211,36 @@ void print_str(char* str) {
 void print_set_color(uint8_t foreground, uint8_t background) {
     color = foreground + (background << 4);
 }
+
+// Convert unsigned integer to string and print it
+void print_uint(unsigned int number) {
+    char buffer[32];
+    int pos = 0;
+    
+    // Handle 0 case
+    if (number == 0) {
+        print_char('0');
+        return;
+    }
+    
+    // Convert digits to characters from right to left
+    while (number > 0) {
+        buffer[pos++] = '0' + (number % 10);
+        number = number / 10;
+    }
+    
+    // Print digits in reverse order
+    while (pos > 0) {
+        print_char(buffer[--pos]);
+    }
+}
+
+// Convert signed integer to string and print it
+void print_int(int number) {
+    if (number < 0) {
+        print_char('-');
+        print_uint(-number);
+    } else {
+        print_uint(number);
+    }
+}

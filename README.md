@@ -11,7 +11,7 @@ Brew Kernel is a simple x86_64 kernel that demonstrates basic OS concepts. It fe
 - Basic Interrupt Descriptor Table (IDT) implementation
 - ASCII character display demo
 - Integer output support with signed and unsigned number handling
-**- Able to run on actual x86_64 hardware.**
+- **Able to run on actual x86_64 hardware.**
 
 
 ## Prerequisites
@@ -46,6 +46,31 @@ You can run the kernel using QEMU:
 qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso
 ```
 
+Or run Brew on actual hardware. </br>
+*note: This is not recommended, i am not liable if this software breaks your system, this is **completely at YOUR OWN RISK.** This software comes with **ZERO** warranty.*
+
+- Step 1:
+    Install BalenaEtcher on your device </br>
+    *From own testing this should work, if you would like to use DD, then do so at again, your own risk.*
+
+- Step 2:
+    Open BalenaEtcher and choose the kernel.iso, an external USB drive and flash it, this should take a second, if not less.
+- Step 3:
+    Find a compatible x86_64 system.
+    ```
+    Tested Hardware:
+    HP EliteDesk 705 G4 DM 65W SBKPF 
+     CPU:   AMD Ryzen 5 PRO 2400G (8) @ 3.600GHz
+     GPU:   AMD ATI Radeon Vega Series (VGA ONLY.)
+    ```
+- Step 4:
+    Enable legacy boot in your BIOS
+- Step 5:
+    Insert the flashed USB Drive and boot using the legacy boot option **NOT UEFI**. </br>
+    **Important Notice: You can only get a display output by using a VGA port for display output, anything other than VGA is NOT supported.**
+- Step 6:
+    Enjoy the Brew Kernel!
+
 
 ## Project Structure
 
@@ -69,6 +94,14 @@ qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso
 - Resolution: 80x25 characters
 - 16-color palette support
 - Memory mapped at 0xB8000
+
+### Integer Output Support
+
+- Signed integer printing with negative number handling
+- Unsigned integer printing for positive numbers only
+- Base-10 (decimal) output format
+- Automatic buffer management for any integer size
+- Numbers automatically wrapped at screen boundaries
 
 ### Interrupts
 

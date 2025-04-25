@@ -66,3 +66,7 @@ void print_set_color(uint8_t foreground, uint8_t background);
 void print_init_palette();
 void print_set_palette_color(uint8_t index, uint8_t red, uint8_t green, uint8_t blue);
 void print_load_palette(const ColorPalette* palette);
+
+// Integer printing functions
+void print_int(int number);
+void print_uint(unsigned int number);

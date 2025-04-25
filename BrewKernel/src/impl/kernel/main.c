@@ -28,6 +28,10 @@ static inline void brewing(int iterations) {
     }
 }
 
+
+// main kernel section,
+// do not remove data, only add if needed.
+// This is kept for documentation and debugging.
 void kernel_main() {
     print_clear();
     
@@ -41,10 +45,41 @@ void kernel_main() {
     print_set_palette_color(5, 163, 73, 164);   // Purple
     print_set_palette_color(6, 108, 198, 74);  // Green
     print_set_palette_color(7, 172, 140, 104);  // Latte
+    print_set_palette_color(14, 252, 3, 236); // pink
 
+    // Display the Brew kernel logo and system information.
     print_set_color(PRINT_INDEX_7, PRINT_INDEX_0);
     print_str("Brew kernel v1.0\n");
-    print_str("Copyright (C) 2024-2025 boreddevhq.\n \n");
+    print_str("Copyright (C) 2024-2025 boreddevhq.\n");
+    print_str("Build: ");
+    print_str(__DATE__);
+    print_str(" ");
+    print_str(__TIME__);
+    print_str("\n");
+    print_str("Architecture: ");
+    #if defined(__x86_64__) || defined(_M_X64)
+        print_str("x86_64");
+    #elif defined(__i386__) || defined(_M_IX86)
+        print_str("x86");
+    #else
+        print_str("Unknown Architecture");
+    #endif
+    print_str("\n");
+    print_str("Compiler: ");
+    #if defined(__clang__)
+        print_str("Clang/LLVM ");
+        print_str(__clang_version__);
+    #elif defined(__GNUC__)
+        print_str("GCC ");
+        print_str(__VERSION__);
+    #else
+        print_str("Unknown Compiler");
+    #endif
+    print_str("\n");
+    
+
+
+
 
     print_set_color(PRINT_INDEX_1, PRINT_INDEX_0);  
     print_str("( (\n");
@@ -59,13 +94,23 @@ void kernel_main() {
     print_set_color(PRINT_INDEX_9, PRINT_INDEX_0); 
     print_str("   `----'\n\n");
     print_set_color(PRINT_INDEX_7, PRINT_INDEX_0);
-
     // Print VGA color indexes 0-15
     for (int i = 0; i < 16; i++) {
         print_set_color(i, i);  
         print_char(' ');       
     }
     print_set_color(PRINT_INDEX_7, PRINT_INDEX_0);  // Reset to default color
+    print_str("\n\n");
+
+
+    // End of main boot section
+    // add and remove any data below this comment however you please.
+
+
+    // Math preview
+    print_str("Math Preview:\n");
+    print_str("5(25 - 52 * 10) + 32 * 50 = ");
+    print_int(5 * (25 - 52 * 10) + 32 * 50);
     print_str("\n\n");
 
     // Infinite loop to continuously display ASCII characters
@@ -77,8 +122,6 @@ void kernel_main() {
                 print_char('\n');
             }
             brewing(10000000); 
-            // Lazy delay for readability, PIT will not be implemented since
-            // there really is no need for it in this kernel.
         }
         
         // Second Loop: Display extended ASCII characters (128-255)
