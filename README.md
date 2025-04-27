@@ -115,6 +115,25 @@ Basic IDT setup with handlers for:
 - Debug Exception (Vector 1)
 - Page Fault (Vector 14)
 
+
+###
+###
+
+<h2 align="left">Help me brew some coffee! ☕️</h2>
+
+###
+
+<p align="left">
+  If you enjoy this project, and like what i'm doing here, consider buying me a coffee!
+  <br><br>
+  <a href="https://buymeacoffee.com/boreddevhq" target="_blank">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" style="border-radius: 8px;" />
+  </a>
+</p>
+
+###
+
+
 ## License
 
 Copyright (C) 2024-2025 boreddevhq
