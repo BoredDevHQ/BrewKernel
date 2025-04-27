@@ -49,7 +49,8 @@ void kernel_main() {
 
     // Display the Brew kernel logo and system information.
     print_set_color(PRINT_INDEX_7, PRINT_INDEX_0);
-    print_str("Brew kernel v1.0\n");
+    print_str("Brew kernel v2.1\n");
+    print_str("If you are seeing this, you are officially awesome.\n");
     print_str("Copyright (C) 2024-2025 boreddevhq.\n");
     print_str("Build: ");
     print_str(__DATE__);

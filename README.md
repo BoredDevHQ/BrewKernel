@@ -3,6 +3,9 @@
 <img src="asciiart.png" width="200" /> </br>
 Brew Kernel is a simple x86_64 kernel that demonstrates basic OS concepts. It features a custom bootloader, VGA text mode output with customizable colors, and basic interrupt handling.
 
+<img src="img/Screenshot 2025-04-28 at 00.23.37.png" width="500" /> </br>
+
+
 ## Features
 
 - 64-bit long mode support
@@ -23,15 +26,14 @@ To build the kernel, you'll need Docker installed on your system. The build envi
 1. First, build the Docker container for the build environment:
 
 ```sh
-cd buildenv
-docker build -t brewkernel-buildenv .
+cd BrewKernel
+docker build buildenv -t brewkernel    
 ```
 
-2. Return to the project root and run the build script:
+2. Run the build script:
 
 ```sh
-cd ..
-docker run --rm -it -v "$(pwd)":/root/env --platform linux/amd64 voidkernel make build-x86_64
+docker run --rm -it -v "$(pwd)":/root/env -w /root/env --platform linux/amd64 brewkernel make build-x86_64    
 ```
 
 The build process will create:
@@ -47,6 +49,9 @@ qemu-system-x86_64 -cdrom dist/x86_64/kernel.iso
 ```
 
 Or run Brew on actual hardware. </br>
+<img src="img/Screenshot 2025-04-28 at 00.23.05.png" width="400" /> </br>
+
+
 *note: This is not recommended, i am not liable if this software breaks your system, this is **completely at YOUR OWN RISK.** This software comes with **ZERO** warranty.*
 
 - Step 1:
